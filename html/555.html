@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="mySelect" class="sumoo" onchange="as()">
+    <option value="-1" type="number">選項1</option>
+    <option value="-2" type="number">選項2</option>
+    <option value="-3" type="number">選項3</option>
+  </select>
+  <output  type="number" class="sumoo">22</output>
+  <output  type="number" class="sumoo">22</output>
+  <output  type="number" class="sumoo"></output>
+<script>
+//    var x = document.getElementById("mySelect");
+//    var y
+//      x.addEventListener("change", function() {
+//    y = this.value;
+//   alert("您选择了选项 " + y);  
+// });
+ 
+
+
+function as(){
+  var t,m
+  let z 
+  var  y = document.getElementsByClassName("sumoo");
+  m=0
+  for(t=0 ; t < y.length ; t++){
+      
+      z=parseInt(y[t].value)
+      if (isNaN(z)) z = 0;
+      m+=z
+      // alert( z );
+     
+  }
+   console.log(m);
+   
+}
+
+
+
+
+// var x = parseInt("10元優惠券")
+
+// console.log(x)
+
+</script>
+  
+</body>
+</html>

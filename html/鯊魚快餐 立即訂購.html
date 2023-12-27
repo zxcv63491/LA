@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鯊魚快餐X檔案啟動</title>
+  <link rel="icon" type="image/x-icon" href="./image/favicon.ico.ico">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/list_slide.css">
+  <link rel="stylesheet" href="./css/click_list.css">
+  <link rel="stylesheet" href="./css/takeMethod.css">
+  <link rel="stylesheet" href="./css/orderbutton.css">
+  <link rel="stylesheet" href="./css/salecode.css">
+ 
+ 
+
+
+
+
+
+  <style type="text/css">
+
+
+  </style>
+</head>
+
+<body onload="sequentialImg();">
+  <header id="t1">
+    <p>鯊魚快餐 X 檔案啟動</p>
+    
+  </header>
+  <div class="navbar" id="navbar">
+    <a href="#" class="tablinks" onclick="openCity(event, 'Home')">主頁</a>
+    <div class="menudown">
+      <button class="menubtn">菜單</button>
+
+
+      <div class="menudown-content">
+        <a href="#" class="tablinks" onclick="openCity(event, 'hamburger')">漢堡</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'drink')">飲料</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'meal')">套餐</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'box')">便當</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'dessert')">點心</a>
+      </div>
+    </div>
+    <a href="#news" class="tablinks" onclick="openCity(event, 'order')">點餐</a>
+    <div class="dropdown">
+      <button class="dropbtn">優惠券 </button>
+
+
+      <div class="dropdown-content">
+        <a href="#" class="tablinks" onclick="openCity(event, 'salecode')">請輸入優惠代碼</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'salelist')">優惠券清單</a>
+        <a href="#" class="tablinks" onclick="openCity(event, 'other')">其他</a>
+      </div>
+    </div>
+    <span class="tablinks" id="clickorder" onclick="openCity(event, 'orderList')">訂單</span>
+  </div>
+
+
+
+
+  <div id="Home" class="tabcontent">
+    <div class="slideshowContainer">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="./image/image_1.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="./image/image_2.jpg">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="./image/image_3.jpg">
+        <div class="text"></div>
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <div class="dot">1</div>
+        <div class="dot">2</div>
+        <div class="dot">3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="hamburger" class="tabcontent">
+    <img class="imageContent" src="./image/image_4.png" alt="">
+    <article class="productName">漢堡</article>
+    <span class="joinOrder" onclick="joinorder1('hamburgerxdd')">加入訂單</span>
+  </div>
+  <div id="drink" class="tabcontent">
+    <img class="imageContent" src="./image/image_5.jpg" alt="">
+    <article class="productName">珍奶</article>
+    <span class="joinOrder" onclick="joinorder2('drinkxdd')">加入訂單</span>
+    <img class="imageContent1" src="./image/img_5-1.jpg" alt="">
+    <div class="productName1">
+      <span>梅果飲&nbsp;&nbsp;&nbsp;巧可歐蕾&nbsp;百果冰茶</span>
+
+    </div>
+    <div class="productName2">
+      <span onclick="joinorder20('drinkxdd1')">加入訂單</span>
+      <span onclick="joinorder21('drinkxdd2')">加入訂單</span>
+      <span onclick="joinorder22('drinkxdd3')">加入訂單</span>
+    </div>
+  </div>
+  <div id="meal" class="tabcontent">
+    <img class="imageContent" src="./image/image_6.jpg" alt="">
+    <article class="productName">套餐</article>
+    <span class="joinOrder" onclick="joinorder3('mealxdd')">加入訂單</span>
+  </div>
+  <div id="box" class="tabcontent">
+    <img class="imageContent" src="./image/bento lunch.jpg" alt="">
+    <article class="productName3">
+      幕之内便當 (幕ノ内弁当) <br>
+      日本百貨便利超商最常見的便當之一，其特色是白飯上灑上芝麻，<br>
+      加上梅乾，配菜以漬物、煮物、玉子燒，而主菜以炸物、燒魚等比較少醬汁的食材為主，<br>
+      以便保存。由於幕之内便當以保存時間為優先，飯菜都是偏向高熱量、高鹽分的。<br>
+      近年來也開始出現以低熱量為主的健康便當。<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      幕之内便當<br>
+      <span class="joinOrderq" onclick="joinorder4('boxxdd')">加入訂單</span>
+    </article>
+    
+    <img class="imageContent2" src="./image/bento box.jpg" alt="">
+    <article class="productName3">
+      日之丸便當 (日の丸弁当) <br>
+
+      以日本國旗為象徵的日之丸便當，特點是白飯上的一梅乾。<br>
+      有時候日之丸便當除了白飯和梅乾外，沒有任何的配菜，<br>
+      而梅乾本身有消除疲勞的作用，因此可能說是一款非常經濟的便當。<br>
+      有人也認為這款便當不太夠營養，因為會加上其他的配菜。<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      日之丸便當<br>
+      <span class="joinOrderq" onclick="joinorder41('boxxdd1')">加入訂單</span>
+    </article>
+    
+    <img class="imageContent2" src="./image/lunch x.jfif" alt="">
+    <article class="productName3">
+      愛妻便當 (愛妻弁当) <br>
+      日本傳統的家庭觀念「男主外，女主內」比較重，雖然近來男女家庭分工已經很不同，<br>
+      但女生為男生預備便當仍是一件浪漫的事情。愛妻便當就是妻子為丈夫預備的便當，<br>
+      日本人也愛用愛妻便當來表達愛意或以此向其他人表示夫妻關係良好。<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      愛妻便當<br>
+      <span class="joinOrderq" onclick="joinorder42('boxxdd2')">加入訂單</span>
+    </article>
+    
+    <img class="imageContent2" src="./image/rail box.jpg" alt="">
+    <article class="productName3">
+      鐵路便當 (駅弁) <br>
+
+      鐵路便當 (駅弁) 可能是很多鐵路迷或遊日人士最想要體驗的事情之一，<br>
+      其實鐵路便當質素非常高，連日本人會著迷。鐵路便當只能於車站內買得到，<br>
+      而且一般都是採用了當地有名或特色的食材，因此日本有很多「只有該站才能品嚐的鐵路便當」。<br>
+      鐵路便當一般價格都是中上級，於車中享用，別有一番風味。<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      旭川鐵路便當<br>
+      <span class="joinOrderq" onclick="joinorder43('boxxdd3')">加入訂單</span>
+    </article>
+    
+    <img class="imageContent2" src="./image/art bento box.jpg" alt="">
+    <article class="productName3">漢堡
+      卡通便當 (キャラ弁) <br>
+      卡通便當對象主要為小朋友，把飯菜做成喜歡的卡通角色， <br>
+      很好用來幫助小朋友克服揀飲擇食的問題。日本也有一些以卡通便當為主題的比賽，<br>
+      很多作品都美得捨不得吃掉。<br>
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      卡通便當<br>
+      <span class="joinOrderq" onclick="joinorder44('boxxdd4')">加入訂單</span>
+    </article>
+    
+  </div>
+  <div id="dessert" class="tabcontent">
+    <img class="imageContent" src="./image/dessert.jpeg" alt="">
+    <article class="productName">蛋塔</article>
+    <span class="joinOrder" onclick="joinorder5('dessertxdd')">加入訂單</span>
+  </div>
+  <div id="order" class="tabcontent">
+
+    <h1>請輸入訂餐資訊</h1>
+    <div class="takeMethod">
+      <span class="listlinks" onclick="openList(event, 'takeAway')">外帶</span>
+      <span class="listlinks" onclick="openList(event, 'delivery')">外送</span>
+    </div>
+    <form action="" id="takeAway" class="listcontent">
+
+      <fieldset id="packagerrr">
+        <legend>
+          <h2>基本資料</h2>
+          <h2>外帶</h2>
+        </legend>
+        <label for="yourName">姓名:</label>
+        <input id="yourName" type="text">
+        <br>
+        <label for="phoneNumber">電話:</label>
+        <input id="phoneNumber" type="tel" pattern="09[0-9]{8}">
+        <br>
+        <label for="takeTime">取餐時間:</label>
+        <select name="takeTime" id="takeTime" onchange="takeff(this)">
+          <option value="today" id="today" ></option>
+          <option value="tommorrow" id="tommorrow"  ></option>
+          <option value="threeday" id="threeday" ></option>
+          <option value="fourday" id="fourday" ></option>
+        </select>
+        <select name="takeTime1" id="takeTime1" class="takeTimes">
+          <option value="hour1" id="hour1" ></option>
+          <option value="hour2" id="hour2" ></option>
+          <option value="hour3" id="hour3" ></option>
+          <option value="hour4" id="hour4" ></option>
+        </select>
+        <select name="takeTime2" id="takeTime2" class="takeTimes"  style="display: none; " >
+          <option value="12:00" id="">12:00</option>
+          <option value="12:15" id="">12:15</option>
+          <option value="12:30" id="">12:30</option>
+          <option value="12:45" id="">12:45</option>
+          <option value="13:00" id="">13:00</option>
+          <option value="13:15" id="">13:15</option>
+          <option value="13:30" id="">13:30</option>
+          <option value="13:45" id="">13:45</option>
+          <option value="14:00" id="">14:00</option>
+          <option value="14:15" id="">14:15</option>
+          <option value="14:30" id="">14:30</option>
+          <option value="14:45" id="">14:45</option>
+          <option value="15:00" id="">15:00</option>
+          <option value="15:15" id="">15:15</option>
+          <option value="15:30" id="">15:30</option>
+          <option value="15:45" id="">15:45</option>
+          <option value="16:00" id="">16:00</option>
+          <option value="16:15" id="">16:15</option>
+          <option value="16:30" id="">16:30</option>
+          <option value="16:45" id="">16:45</option>
+          <option value="17:00" id="">17:00</option>
+          <option value="17:15" id="">17:15</option>
+          <option value="17:30" id="">17:30</option>
+          <option value="17:45" id="">17:45</option>
+          <option value="18:00" id="">18:00</option>
+          <option value="18:15" id="">18:15</option>
+          <option value="18:30" id="">18:30</option>
+          <option value="18:45" id="">18:45</option>
+          <option value="19:00" id="">19:00</option>
+          <option value="19:15" id="">19:15</option>
+          <option value="19:30" id="">19:30</option>
+          <option value="19:45" id="">19:45</option>
+          <option value="20:00" id="">20:00</option>
+          <option value="20:15" id="">20:15</option>
+          <option value="20:30" id="">20:30</option>
+          <option value="20:45" id="">20:45</option>
+          <option value="21:00" id="">21:00</option>
+          <option value="21:15" id="">21:15</option>
+          <option value="21:30" id="">21:30</option>
+          <option value="21:45" id="">21:45</option>
+        </select>
+
+        <br>
+        <label for="locationShop">請選擇門市:</label>
+        <select name="locationShop" id="locationShop">
+          <optgroup label="北部">
+            <option value="西門">西門</option>
+            <option value="信義">信義</option>
+          </optgroup>
+          <optgroup label="中部">
+            <option value="谷關">谷關</option>
+            <option value="溪頭">溪頭</option>
+          </optgroup>
+        </select><br>
+        <span class="confirmm" onclick="confirm1()">送出</span>
+      </fieldset>
+
+    </form>
+    <form action="" id="delivery" class="listcontent">
+      <fieldset id="deliveryrrr">
+        <legend>
+          <h2>基本資料</h2>
+          <h2>外送</h2>
+        </legend>
+        <label for="yourName1">姓名:</label>
+        <input id="yourName1" type="text">
+        <br>
+        <label for="phoneNumber1">電話:</label>
+        <input id="phoneNumber1" type="tel" pattern="09[0-9]{8}">
+        <br>
+        <label for="deliveryTime" >送達時間:</label>
+        <select name="deliveryTime" id="deliveryTime" onchange="takehh(this)">
+          <option value="today1" id="today1"></option>
+          <option value="tommorrow1" id="tommorrow1"></option>
+          <option value="threeday1" id="threeday1"></option>
+          <option value="fourday1" id="fourday1"></option>
+        </select>
+        <select name="deliveryTime1" id="deliveryTime1" class="takeTimess">
+          <option value="hour11" id="hour11"></option>
+          <option value="hour21" id="hour21"></option>
+          <option value="hour31" id="hour31"></option>
+          <option value="hour41" id="hour41"></option>
+        </select>
+        <select name="deliveryTime2" id="deliveryTime2" class="takeTimess"  style="display: none; " >
+          <option value="12:00" id="">12:00</option>
+          <option value="12:15" id="">12:15</option>
+          <option value="12:30" id="">12:30</option>
+          <option value="12:45" id="">12:45</option>
+          <option value="13:00" id="">13:00</option>
+          <option value="13:15" id="">13:15</option>
+          <option value="13:30" id="">13:30</option>
+          <option value="13:45" id="">13:45</option>
+          <option value="14:00" id="">14:00</option>
+          <option value="14:15" id="">14:15</option>
+          <option value="14:30" id="">14:30</option>
+          <option value="14:45" id="">14:45</option>
+          <option value="15:00" id="">15:00</option>
+          <option value="15:15" id="">15:15</option>
+          <option value="15:30" id="">15:30</option>
+          <option value="15:45" id="">15:45</option>
+          <option value="16:00" id="">16:00</option>
+          <option value="16:15" id="">16:15</option>
+          <option value="16:30" id="">16:30</option>
+          <option value="16:45" id="">16:45</option>
+          <option value="17:00" id="">17:00</option>
+          <option value="17:15" id="">17:15</option>
+          <option value="17:30" id="">17:30</option>
+          <option value="17:45" id="">17:45</option>
+          <option value="18:00" id="">18:00</option>
+          <option value="18:15" id="">18:15</option>
+          <option value="18:30" id="">18:30</option>
+          <option value="18:45" id="">18:45</option>
+          <option value="19:00" id="">19:00</option>
+          <option value="19:15" id="">19:15</option>
+          <option value="19:30" id="">19:30</option>
+          <option value="19:45" id="">19:45</option>
+          <option value="20:00" id="">20:00</option>
+          <option value="20:15" id="">20:15</option>
+          <option value="20:30" id="">20:30</option>
+          <option value="20:45" id="">20:45</option>
+          <option value="21:00" id="">21:00</option>
+          <option value="21:15" id="">21:15</option>
+          <option value="21:30" id="">21:30</option>
+          <option value="21:45" id="">21:45</option>
+        </select>
+        <br>
+        <label for="address">請輸入地址:</label>
+        <select name="address" id="address">
+          <optgroup label="北部">
+            <option value="台北市萬華區">台北市萬華區</option>
+            <option value="台北市信義區">台北市信義區</option>
+          </optgroup>
+          <optgroup label="中部">
+            <option value="台中市和平區">台中市和平區</option>
+            <option value="南投縣鹿谷鄉">南投縣鹿谷鄉</option>
+          </optgroup>
+        </select>
+        <input id="address1" type="text"><br>
+        <span class="confirmm" onclick="confirm2()">送出</span>
+      </fieldset>
+    </form>
+
+
+  </div>
+
+  <div id="salecode" class="tabcontent" >
+    <p>請輸入優惠代碼
+      <input id="salecode1" type="text" onkeypress="entercode(event)">
+      <button id="salecode2" onclick="inputcode()" style="cursor: pointer;">確認</ㄖ>
+    </p>
+
+  </div>
+  <div id="salelist" class="tabcontent">
+
+  </div>
+  <div id="other" class="tabcontent">
+
+  </div>
+  <div id="orderList" class="tabcontent">
+
+
+    <form action="">
+      <fieldset id="orderData">
+        <legend>
+          <h1>訂單資料</h1>
+        </legend>
+        <div id="hamburgerxdd" class="orderListxdd">
+          <label for="hamburgerouo">漢堡:</label>
+          <input value="1" id="hamburgerouo" type="text">
+          <span onclick="plus('hamburgerouo','xhamburgerouo','100')">+</span>
+          <span onclick="minus('hamburgerouo','xhamburgerouo','100')">─</span>
+          =<output id="xhamburgerouo" name="xhamburgerouo" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="drinkxdd" class="orderListxdd">
+          <label>珍奶:</label>
+          <input value="1" id="drinkouo" type="text">
+          <span onclick="plus('drinkouo','xdrinkouo','50')">+</span>
+          <span onclick="minus('drinkouo','xdrinkouo','50')">─</span>
+          =<output id="xdrinkouo" name="xdrinkouo" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="drinkxdd1" class="orderListxdd">
+          <label>梅果飲:</label>
+          <input value="1" id="drinkouo1" type="text">
+          <span onclick="plus('drinkouo1','xdrinkouo1','50')">+</span>
+          <span onclick="minus('drinkouo1','xdrinkouo1','50')">─</span>
+          =<output id="xdrinkouo1" name="xdrinkouo1" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="drinkxdd2" class="orderListxdd">
+          <label>巧可歐蕾:</label>
+          <input value="1" id="drinkouo2" type="text">
+          <span onclick="plus('drinkouo2','xdrinkouo2','50')">+</span>
+          <span onclick="minus('drinkouo2','xdrinkouo2','50')">─</span>
+          =<output id="xdrinkouo2" name="xdrinkouo2" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="drinkxdd3" class="orderListxdd">
+          <label>百果冰茶:</label>
+          <input value="1" id="drinkouo3" type="text">
+          <span onclick="plus('drinkouo3','xdrinkouo3','50')">+</span>
+          <span onclick="minus('drinkouo3','xdrinkouo3','50')">─</span>
+          =<output id="xdrinkouo3" name="xdrinkouo3" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="mealxdd" class="orderListxdd">
+          <label>套餐:</label>
+          <input value="1" id="mealouo" type="text">
+          <span onclick="plus('mealouo','xmealouo','150')">+</span>
+          <span onclick="minus('mealouo','xmealouo','150')">─</span>
+          =<output id="xmealouo" name="xmealouo" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="boxxdd" class="orderListxdd">
+          <label>幕之内便當:</label>
+          <input value="1" id="boxouo" type="text">
+          <span onclick="plus('boxouo','xboxouo','110')">+</span>
+          <span onclick="minus('boxouo','xboxouo','110')">─</span>
+          =<output id="xboxouo" name="xboxouo" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="boxxdd1" class="orderListxdd">
+          <label>日之丸便當:</label>
+          <input value="1" id="boxouo1" type="text">
+          <span onclick="plus('boxouo1','xboxouo1','120')">+</span>
+          <span onclick="minus('boxouo1','xboxouo1','120')">─</span>
+          =<output id="xboxouo1" name="xboxouo1" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="boxxdd2" class="orderListxdd">
+          <label>愛妻便當:</label>
+          <input value="1" id="boxouo2" type="text">
+          <span onclick="plus('boxouo2','xboxouo2','110')">+</span>
+          <span onclick="minus('boxouo2','xboxouo2','110')">─</span>
+          =<output id="xboxouo2" name="xboxouo2" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="boxxdd3" class="orderListxdd">
+          <label>旭川鐵路便當:</label>
+          <input value="1" id="boxouo3" type="text">
+          <span onclick="plus('boxouo3','xboxouo3','100')">+</span>
+          <span onclick="minus('boxouo3','xboxouo3','100')">─</span>
+          =<output id="xboxouo3" name="xboxouo3" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="boxxdd4" class="orderListxdd">
+          <label>卡通便當:</label>
+          <input value="1" id="boxouo4" type="text">
+          <span onclick="plus('boxouo4','xboxouo4','120')">+</span>
+          <span onclick="minus('boxouo4','xboxouo4','120')">─</span>
+          =<output id="xboxouo4" name="xboxouo4" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="dessertxdd" class="orderListxdd">
+          <label>蛋塔:</label>
+          <input value="1" id="dessertouo" type="text">
+          <span onclick="plus('dessertouo','xdessertouo','115')">+</span>
+          <span onclick="minus('dessertouo','xdessertouo','115')">─</span>
+          =<output id="xdessertouo" name="xdessertouo" type="text" class="sumoo"></output>
+        </div>
+        <br>
+        <div id="subqqq">
+          付款方式:
+          <input type="radio" name="pay" id="cash"><label for="cash">現金</label>
+          <input type="radio" name="pay" id="credit"><label for="credit">信用卡</label>
+          <br>
+          <label for="coupon">請選擇優惠券:</label>
+          <select id="coupon" class="sumoo" onchange="as()">
+            <option  class="coupons">請選擇優惠券</option>
+            <option value="-10" id="coupon1" class="coupons">1號優惠券:折價10元</option>
+            <option value="-20" id="coupon2" class="coupons">2號優惠券:折價20元</option>
+            <option value="-30" id="coupon3" class="coupons">3號優惠券:折價30元</option>
+            <option value="-40" id="coupon4" class="coupons">4號優惠券:折價40元</option>
+            <option value="-50" id="coupon5" class="coupons">5號優惠券:折價50元</option>
+          </select>
+          <article>結帳金額:
+            <output id="countMoney"></output>
+          </article>
+         
+          <div style="background-color: burlywood;" id="dataconfirm">資料確認 <br> 
+               取餐方式:<p id="takeMethodtt"></p><br>
+               <div id="locationShoptt" style="display: none;">門市:<p id="locationShopttr"></p></div>
+               <div id="addresstt" style="display: none;">地址:<p id="addressttr"></p></div>
+               姓名:<p id="namett"></p><br>
+               電話:<p id="phonett"></p><br>
+               時間:<p id="timett"></p><br>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  
+  
+
+
+
+
+  <script src="./js/slide.js">  </script>
+  <script src="./js/tab.js"></script>
+  <script src="./js/joinorder.js"></script>
+  <script src="./js/date.js"></script>
+  <script src="./js/orderbutton.js"></script>
+  <script src="./js/plus_minus.js"></script>
+  <script src="./js/optiondate.js"></script>
+  <script src="./js/comfirm.js"></script>
+  <script src="./js/sticky.js"></script>
+  
+
+
+
+
+
+
+
+
+</body>
+
+</html>

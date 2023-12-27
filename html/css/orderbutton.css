@@ -1,0 +1,17 @@
+.listlinks:hover {
+    background-color: #79e47e;
+  }
+  .listlinks.active {
+    background-color: #6ba363;
+  }
+#dataconfirm p{
+  display: inline-block;
+  
+}
+.confirmm{
+  background-color: rgb(184, 181, 181);
+  font-size: 20px !important;
+  cursor: pointer;
+  border-radius: 5px ;
+  border: 2px rgb(94, 92, 92) solid;
+}

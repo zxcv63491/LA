@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+</head>
+
+<body>
+
+
+  <p id="today"></p>
+  <script>
+    var today = new Date();
+    // today.setDate(today.getDay() + 1);
+    // today.setMonth(today.getMonth() + 1);
+    // console.log(today);
+    // document.getElementById("today").innerText = 
+    // today.getFullYear()+"-"+today.getMonth()+"-"+today.getDay() ;
+        
+        // today.setHours(today.getHours()+1);
+var today = new Date();
+var today1 = new Date();
+var today2 = new Date();
+var today3 = new Date();
+var todays= new Date(today1.setMinutes(today1.getMinutes()+15));
+var todayss= new Date(today2.setMinutes(today2.getMinutes()+30));
+var todaysss= new Date(today3.setMinutes(today3.getMinutes()+100));
+var todayx= todays.getMinutes().toString().padStart(2,"0") ;
+var todayxx= todayss.getMinutes().toString().padStart(2,"0")  ;
+var todayxxx= todaysss.getMinutes().toString().padStart(2,"0") ;
+
+var todayu=todays.getHours() ;
+var todayuu=todayss.getHours() ;
+var todayuuu=todaysss.getHours() ;
+console.log(todayxx)
+         
+  </script>
+</body>
+
+</html>

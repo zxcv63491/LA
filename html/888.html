@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select style="height:25px;width:160px;" onchange="xx(this)"> 
+        <option value="err" >选择查找方式</option>
+        <option value="low" >简单查询</option>
+        <option value="mid" >模糊检索</option>
+        <option value="hih" >高级搜索</option>
+    </select>     
+    <select name="takeTime" id="takeTime" onchange="takeff()">
+          <option value="today" id="today" >2</option>
+          <option value="tommorrow" id="tommorrow"  >3</option>
+          <option value="threeday" id="threeday" >4</option>
+          <option value="fourday" id="fourday" >5</option>
+    </select> 
+    <script>
+    function takeff(){
+    var selectedOption=document.getElementById("takeTime")
+	//alert(selectedOption.value);
+	if(selectedOption.value=="today"){
+       alert("a")
+ 	}else if(selectedOption.value=="tommorrow"){
+     alert("z")
+ 	}else if(selectedOption.value=="threeday"){
+     alert("q")
+ 	}
+}
+    </script>
+</body>
+</html>
