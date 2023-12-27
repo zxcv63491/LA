@@ -12,23 +12,14 @@
   <link rel="stylesheet" href="./css/takeMethod.css">
   <link rel="stylesheet" href="./css/orderbutton.css">
   <link rel="stylesheet" href="./css/salecode.css">
- 
- 
+  <link rel="stylesheet" href="./css/tymodel.css">
 
-
-
-
-
-  <style type="text/css">
-
-
-  </style>
 </head>
 
 <body onload="sequentialImg();">
   <header id="t1">
     <p>鯊魚快餐 X 檔案啟動</p>
-    
+
   </header>
   <div class="navbar" id="navbar">
     <a href="#" class="tablinks" onclick="openCity(event, 'Home')">主頁</a>
@@ -62,6 +53,13 @@
 
 
   <div id="Home" class="tabcontent">
+    <div id="tyModal">
+      <div class="tyModalContent">
+        <span class="tyClose">&times;</span>
+        <h1>好康報報</h1>
+        <p>優惠資訊</p>
+      </div>
+    </div>
     <div class="slideshowContainer">
       <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
@@ -128,7 +126,7 @@
       幕之内便當<br>
       <span class="joinOrderq" onclick="joinorder4('boxxdd')">加入訂單</span>
     </article>
-    
+
     <img class="imageContent2" src="./image/bento box.jpg" alt="">
     <article class="productName3">
       日之丸便當 (日の丸弁当) <br>
@@ -141,7 +139,7 @@
       日之丸便當<br>
       <span class="joinOrderq" onclick="joinorder41('boxxdd1')">加入訂單</span>
     </article>
-    
+
     <img class="imageContent2" src="./image/lunch x.jfif" alt="">
     <article class="productName3">
       愛妻便當 (愛妻弁当) <br>
@@ -152,7 +150,7 @@
       愛妻便當<br>
       <span class="joinOrderq" onclick="joinorder42('boxxdd2')">加入訂單</span>
     </article>
-    
+
     <img class="imageContent2" src="./image/rail box.jpg" alt="">
     <article class="productName3">
       鐵路便當 (駅弁) <br>
@@ -165,7 +163,7 @@
       旭川鐵路便當<br>
       <span class="joinOrderq" onclick="joinorder43('boxxdd3')">加入訂單</span>
     </article>
-    
+
     <img class="imageContent2" src="./image/art bento box.jpg" alt="">
     <article class="productName3">漢堡
       卡通便當 (キャラ弁) <br>
@@ -176,7 +174,7 @@
       卡通便當<br>
       <span class="joinOrderq" onclick="joinorder44('boxxdd4')">加入訂單</span>
     </article>
-    
+
   </div>
   <div id="dessert" class="tabcontent">
     <img class="imageContent" src="./image/dessert.jpeg" alt="">
@@ -205,18 +203,18 @@
         <br>
         <label for="takeTime">取餐時間:</label>
         <select name="takeTime" id="takeTime" onchange="takeff(this)">
-          <option value="today" id="today" ></option>
-          <option value="tommorrow" id="tommorrow"  ></option>
-          <option value="threeday" id="threeday" ></option>
-          <option value="fourday" id="fourday" ></option>
+          <option value="today" id="today"></option>
+          <option value="tommorrow" id="tommorrow"></option>
+          <option value="threeday" id="threeday"></option>
+          <option value="fourday" id="fourday"></option>
         </select>
         <select name="takeTime1" id="takeTime1" class="takeTimes">
-          <option value="hour1" id="hour1" ></option>
-          <option value="hour2" id="hour2" ></option>
-          <option value="hour3" id="hour3" ></option>
-          <option value="hour4" id="hour4" ></option>
+          <option value="hour1" id="hour1"></option>
+          <option value="hour2" id="hour2"></option>
+          <option value="hour3" id="hour3"></option>
+          <option value="hour4" id="hour4"></option>
         </select>
-        <select name="takeTime2" id="takeTime2" class="takeTimes"  style="display: none; " >
+        <select name="takeTime2" id="takeTime2" class="takeTimes" style="display: none; ">
           <option value="12:00" id="">12:00</option>
           <option value="12:15" id="">12:15</option>
           <option value="12:30" id="">12:30</option>
@@ -287,7 +285,7 @@
         <label for="phoneNumber1">電話:</label>
         <input id="phoneNumber1" type="tel" pattern="09[0-9]{8}">
         <br>
-        <label for="deliveryTime" >送達時間:</label>
+        <label for="deliveryTime">送達時間:</label>
         <select name="deliveryTime" id="deliveryTime" onchange="takehh(this)">
           <option value="today1" id="today1"></option>
           <option value="tommorrow1" id="tommorrow1"></option>
@@ -300,7 +298,7 @@
           <option value="hour31" id="hour31"></option>
           <option value="hour41" id="hour41"></option>
         </select>
-        <select name="deliveryTime2" id="deliveryTime2" class="takeTimess"  style="display: none; " >
+        <select name="deliveryTime2" id="deliveryTime2" class="takeTimess" style="display: none; ">
           <option value="12:00" id="">12:00</option>
           <option value="12:15" id="">12:15</option>
           <option value="12:30" id="">12:30</option>
@@ -362,7 +360,7 @@
 
   </div>
 
-  <div id="salecode" class="tabcontent" >
+  <div id="salecode" class="tabcontent">
     <p>請輸入優惠代碼
       <input id="salecode1" type="text" onkeypress="entercode(event)">
       <button id="salecode2" onclick="inputcode()" style="cursor: pointer;">確認</ㄖ>
@@ -486,7 +484,7 @@
           <br>
           <label for="coupon">請選擇優惠券:</label>
           <select id="coupon" class="sumoo" onchange="as()">
-            <option  class="coupons">請選擇優惠券</option>
+            <option class="coupons">請選擇優惠券</option>
             <option value="-10" id="coupon1" class="coupons">1號優惠券:折價10元</option>
             <option value="-20" id="coupon2" class="coupons">2號優惠券:折價20元</option>
             <option value="-30" id="coupon3" class="coupons">3號優惠券:折價30元</option>
@@ -496,21 +494,23 @@
           <article>結帳金額:
             <output id="countMoney"></output>
           </article>
-         
-          <div style="background-color: burlywood;" id="dataconfirm">資料確認 <br> 
-               取餐方式:<p id="takeMethodtt"></p><br>
-               <div id="locationShoptt" style="display: none;">門市:<p id="locationShopttr"></p></div>
-               <div id="addresstt" style="display: none;">地址:<p id="addressttr"></p></div>
-               姓名:<p id="namett"></p><br>
-               電話:<p id="phonett"></p><br>
-               時間:<p id="timett"></p><br>
+
+          <div style="background-color: burlywood;" id="dataconfirm">資料確認 <br>
+            取餐方式:<p id="takeMethodtt"></p><br>
+            <div id="locationShoptt" style="display: none;">門市:<p id="locationShopttr"></p>
+            </div>
+            <div id="addresstt" style="display: none;">地址:<p id="addressttr"></p>
+            </div>
+            姓名:<p id="namett"></p><br>
+            電話:<p id="phonett"></p><br>
+            時間:<p id="timett"></p><br>
           </div>
         </div>
       </fieldset>
     </form>
   </div>
-  
-  
+
+
 
 
 
@@ -524,7 +524,7 @@
   <script src="./js/optiondate.js"></script>
   <script src="./js/comfirm.js"></script>
   <script src="./js/sticky.js"></script>
-  
+  <script src="./js/spanelem.js"></script>
 
 
 
